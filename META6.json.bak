@@ -1,0 +1,38 @@
+{
+    "depends": [
+	    "p6-GLib"
+    ],
+    "description": "Perl6 library bindings for GNOME's ATK library",
+    "version": "r0.0.1",
+    "meta-version": "0",
+    "source-url": "https://github.com/Xliff/p6-ATK",
+    "provides": {
+      "ATK::Raw::Definitions"       :  "lib/ATK/Raw/Definitions.pm6"      ,
+      "ATK::Raw::Enums"             :  "lib/ATK/Raw/Enums.pm6"            ,
+      "ATK::Raw::Structs"           :  "lib/ATK/Raw/Structs.pm6"          ,
+      "ATK::Raw::Exports"           :  "lib/ATK/Raw/Exports.pm6"          ,
+      "ATK::Raw::Types"             :  "lib/ATK/Raw/Types.pm6"            ,
+      "ATK::Roles::Signals::Object" :  "lib/ATK/Roles/Signals/Object.pm6" ,
+      "ATK::State"                  :  "lib/ATK/State.pm6"                ,
+      "ATK::Raw::Object"            :  "lib/ATK/Raw/Object.pm6"           ,
+      "ATK::Raw::Relation"          :  "lib/ATK/Raw/Relation.pm6"         ,
+      "ATK::Raw::RelationSet"       :  "lib/ATK/Raw/RelationSet.pm6"      ,
+      "ATK::Raw::StateSet"          :  "lib/ATK/Raw/StateSet.pm6"         ,
+      "ATK::Relation"               :  "lib/ATK/Relation.pm6"             ,
+      "ATK::RelationSet"            :  "lib/ATK/RelationSet.pm6"          ,
+      "ATK::StateSet"               :  "lib/ATK/StateSet.pm6"             ,
+      "ATK::Object"                 :  "lib/ATK/Object.pm6"               
+    },
+    "name": "p6-ATK",
+    "perl": "6.c",
+    "test-depends": [ "Test::META" ],
+    "build-depends": [
+      "Text::Table::Simple",
+      "Dependency::Sort",
+      "Color",
+      "RandomColor",
+      "File::Find"
+    ],
+    "support": { "source": null },
+    "authors": [ "clifton.wood@gmail.com" ]
+}

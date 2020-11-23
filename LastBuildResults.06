@@ -1,0 +1,225 @@
+Dependency Generation
+=====================
+real 0.61
+user 0.99
+sys 0.04
+ === GLib::Array ===
+Stage start      :   0.000
+Stage parse      :   1.653
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.524
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.595
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.006
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GLib::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.379
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GLib::Raw::Object ===
+Stage start      :   0.000
+Stage parse      :   1.642
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Struct_Subs ===
+Stage start      :   0.000
+Stage parse      :   1.505
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.796
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Subs ===
+Stage start      :   0.000
+Stage parse      :   1.645
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::Object ===
+Stage start      :   0.000
+Stage parse      :   2.025
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.014
+Stage moar       :   0.000
+ === GLib::Roles::Pointers ===
+Stage start      :   0.000
+Stage parse      :   1.522
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::StaticClass ===
+Stage start      :   0.000
+Stage parse      :   1.664
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Value ===
+Stage start      :   0.000
+Stage parse      :   1.722
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Method::Also ===
+Stage start      :   0.000
+Stage parse      :   1.398
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === NativeCall ===
+Stage start      :   0.000
+Stage parse      :   1.553
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === ATK::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.600
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === ATK::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.545
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === ATK::Raw::Structs ===
+Stage start      :   0.000
+
+    precomp lib/ATK/Raw/Structs.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs)
+    Unable to parse class definition
+    at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs):54
+    ------> [32mbject         is repr<CStruct> is export[33m⏏[31m also does GLib::Roles::Pointers {[0m
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs)
+Unable to parse class definition
+at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs):54
+------> [32mbject         is repr<CStruct> is export[33m⏏[31m also does GLib::Roles::Pointers {[0m
+
+at -e:1
+ === ATK::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.475
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === ATK::Raw::Types ===
+Stage start      :   0.000
+
+    precomp lib/ATK/Raw/Types.pm6
+    Stage start      :   0.000
+    
+        precomp lib/ATK/Raw/Structs.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs)
+        Unable to parse class definition
+        at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs):54
+        ------> [32mbject         is repr<CStruct> is export[33m⏏[31m also does GLib::Roles::Pointers {[0m
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Types.pm6 (ATK::Raw::Types)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs)
+    Unable to parse class definition
+    at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs):54
+    ------> [32mbject         is repr<CStruct> is export[33m⏏[31m also does GLib::Roles::Pointers {[0m
+    
+    at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Types.pm6 (ATK::Raw::Types):16
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/ATK/Raw/Structs.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs)
+    Unable to parse class definition
+    at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs):54
+    ------> [32mbject         is repr<CStruct> is export[33m⏏[31m also does GLib::Roles::Pointers {[0m
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Types.pm6 (ATK::Raw::Types)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs)
+Unable to parse class definition
+at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Structs.pm6 (ATK::Raw::Structs):54
+------> [32mbject         is repr<CStruct> is export[33m⏏[31m also does GLib::Roles::Pointers {[0m
+
+at /home/cbwood/Projects/p6-ATK/lib/ATK/Raw/Types.pm6 (ATK::Raw::Types):16
+
+at -e:1
+ === ATK::Roles::Signals::Object ===
+Stage start      :   0.000
+
+    precomp lib/ATK/Roles/Signals/Object.pm6
+    Stage start      :   0.000
+    
+        precomp lib/ATK/Raw/Types.pm6
+        Stage start      :   0.000
+        
+            precomp lib/ATK/Raw/Structs.pm6
+            Stage start      :   0.000

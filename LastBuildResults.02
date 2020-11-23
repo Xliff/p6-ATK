@@ -1,0 +1,234 @@
+Dependency Generation
+=====================
+real 0.57
+user 0.92
+sys 0.03
+ === ATK::Object ===
+Stage start      :   0.000
+
+    precomp lib/ATK/Object.pm6
+    Stage start      :   0.000
+    
+        precomp lib/ATK/Raw/Types.pm6
+        Stage start      :   0.000
+        
+            precomp lib/ATK/Raw/Structs.pm6
+            Stage start      :   0.000
+            Stage parse      :   2.261
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.013
+            Stage mast       :   0.050
+            Stage mbc        :   0.020
+        Stage parse      :   4.555
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.001
+        Stage mast       :   0.029
+        Stage mbc        :   0.002
+    
+        precomp lib/ATK/RelationSet.pm6
+        Stage start      :   0.000
+        
+            precomp lib/ATK/Raw/RelationSet.pm6
+            Stage start      :   0.000
+            Stage parse      :   2.428
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.006
+            Stage mast       :   0.045
+            Stage mbc        :   0.029
+        
+            precomp lib/ATK/Relation.pm6
+            Stage start      :   0.000
+            
+                precomp lib/ATK/Raw/Relation.pm6
+                Stage start      :   0.000
+                Stage parse      :   2.297
+                Stage syntaxcheck:   0.000
+                Stage ast        :   0.000
+                Stage optimize   :   0.006
+                Stage mast       :   0.041
+                Stage mbc        :   0.015
+            Stage parse      :   5.056
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.013
+            Stage mast       :   0.059
+            Stage mbc        :   0.007
+        Stage parse      :  10.397
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.011
+        Stage mast       :   0.062
+        Stage mbc        :   0.006
+    
+        precomp lib/ATK/StateSet.pm6
+        Stage start      :   0.000
+        
+            precomp lib/ATK/Raw/StateSet.pm6
+            Stage start      :   0.000
+            Stage parse      :   2.777
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.007
+            Stage mast       :   0.052
+            Stage mbc        :   0.019
+        Stage parse      :   5.797
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.016
+        Stage mast       :   0.068
+        Stage mbc        :   0.007
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Object.pm6 (ATK::Object)
+    Undeclared name:
+        AtkAttribute used at line 412. Did you mean 'Attribute', 'AtkAttributeSet'?
+    Undeclared routines:
+        atk_object_add_relationship used at line 393
+        atk_object_connect_property_change_handler used at line 399
+        atk_object_get_accessible_id used at line 403
+        atk_object_get_attributes used at line 407
+        atk_object_get_description used at line 419
+        atk_object_get_index_in_parent used at line 423
+        atk_object_get_layer used at line 427. Did you mean 'g_object_get_ptr'?
+        atk_object_get_mdi_zorder used at line 431
+        atk_object_get_n_accessible_children used at line 435
+        atk_object_get_name used at line 439. Did you mean 'g_object_get_uint', 'g_object_get_ptr', 'g_object_get_int64', 'g_object_get_int'?
+        atk_object_get_object_locale used at line 443
+        atk_object_get_parent used at line 447. Did you mean 'g_object_get_uint', 'g_object_get_string', 'g_object_get_ptr', 'g_object_get_int', 'g_object_get_ptr_data'?
+        atk_object_get_role used at line 451. Did you mean 'g_object_get_uint', 'g_object_get_float', 'g_object_get_ptr', 'g_object_set_double', 'g_object_get_double'?
+        atk_object_get_type used at line 457. Did you mean 'g_object_get_uint', 'g_object_get_ptr', 'g_object_get_int'?
+        atk_object_initialize used at line 461
+        atk_object_notify_state_change used at line 468
+        atk_object_peek_parent used at line 472
+        atk_object_ref_accessible_child used at line 482
+        atk_object_ref_relation_set used at line 491
+        atk_object_ref_state_set used at line 500
+        atk_object_remove_property_change_handler used at line 513
+        atk_object_remove_relationship used at line 519
+        atk_object_set_accessible_id used at line 523
+        atk_object_set_description used at line 527
+        atk_object_set_name used at line 531. Did you mean 'g_object_set_uint', 'g_object_set_int', 'g_object_set_ptr', 'g_object_set_int64'?
+        atk_object_set_parent used at line 535. Did you mean 'g_object_set_uint', 'g_object_set_int', 'g_object_set_string', 'g_object_set_ptr_data', 'g_object_set_ptr'?
+        atk_object_set_role used at line 541. Did you mean 'g_object_set_float', 'g_object_set_uint', 'g_object_set_int', 'g_object_set_ptr', 'g_object_set_double'?
+        atk_role_for_name used at line 550
+        atk_role_get_localized_name used at line 556
+        atk_role_get_name used at line 562
+        atk_role_register used at line 566
+    
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp lib/ATK/Raw/Types.pm6
+    Stage start      :   0.000
+    
+        precomp lib/ATK/Raw/Structs.pm6
+        Stage start      :   0.000
+        Stage parse      :   2.261
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.013
+        Stage mast       :   0.050
+        Stage mbc        :   0.020
+    Stage parse      :   4.555
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.001
+    Stage mast       :   0.029
+    Stage mbc        :   0.002
+
+    precomp lib/ATK/RelationSet.pm6
+    Stage start      :   0.000
+    
+        precomp lib/ATK/Raw/RelationSet.pm6
+        Stage start      :   0.000
+        Stage parse      :   2.428
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.006
+        Stage mast       :   0.045
+        Stage mbc        :   0.029
+    
+        precomp lib/ATK/Relation.pm6
+        Stage start      :   0.000
+        
+            precomp lib/ATK/Raw/Relation.pm6
+            Stage start      :   0.000
+            Stage parse      :   2.297
+            Stage syntaxcheck:   0.000
+            Stage ast        :   0.000
+            Stage optimize   :   0.006
+            Stage mast       :   0.041
+            Stage mbc        :   0.015
+        Stage parse      :   5.056
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.013
+        Stage mast       :   0.059
+        Stage mbc        :   0.007
+    Stage parse      :  10.397
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.011
+    Stage mast       :   0.062
+    Stage mbc        :   0.006
+
+    precomp lib/ATK/StateSet.pm6
+    Stage start      :   0.000
+    
+        precomp lib/ATK/Raw/StateSet.pm6
+        Stage start      :   0.000
+        Stage parse      :   2.777
+        Stage syntaxcheck:   0.000
+        Stage ast        :   0.000
+        Stage optimize   :   0.007
+        Stage mast       :   0.052
+        Stage mbc        :   0.019
+    Stage parse      :   5.797
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.016
+    Stage mast       :   0.068
+    Stage mbc        :   0.007
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-ATK/lib/ATK/Object.pm6 (ATK::Object)
+Undeclared name:
+    AtkAttribute used at line 412. Did you mean 'Attribute', 'AtkAttributeSet'?
+Undeclared routines:
+    atk_object_add_relationship used at line 393
+    atk_object_connect_property_change_handler used at line 399
+    atk_object_get_accessible_id used at line 403
+    atk_object_get_attributes used at line 407
+    atk_object_get_description used at line 419
+    atk_object_get_index_in_parent used at line 423
+    atk_object_get_layer used at line 427. Did you mean 'g_object_get_ptr'?
+    atk_object_get_mdi_zorder used at line 431
+    atk_object_get_n_accessible_children used at line 435
+    atk_object_get_name used at line 439. Did you mean 'g_object_get_uint', 'g_object_get_ptr', 'g_object_get_int64', 'g_object_get_int'?
+    atk_object_get_object_locale used at line 443
+    atk_object_get_parent used at line 447. Did you mean 'g_object_get_uint', 'g_object_get_string', 'g_object_get_ptr', 'g_object_get_int', 'g_object_get_ptr_data'?
+    atk_object_get_role used at line 451. Did you mean 'g_object_get_uint', 'g_object_get_float', 'g_object_get_ptr', 'g_object_set_double', 'g_object_get_double'?
+    atk_object_get_type used at line 457. Did you mean 'g_object_get_uint', 'g_object_get_ptr', 'g_object_get_int'?
+    atk_object_initialize used at line 461
+    atk_object_notify_state_change used at line 468
+    atk_object_peek_parent used at line 472
+    atk_object_ref_accessible_child used at line 482
+    atk_object_ref_relation_set used at line 491
+    atk_object_ref_state_set used at line 500
+    atk_object_remove_property_change_handler used at line 513
+    atk_object_remove_relationship used at line 519
+    atk_object_set_accessible_id used at line 523
+    atk_object_set_description used at line 527
+    atk_object_set_name used at line 531. Did you mean 'g_object_set_uint', 'g_object_set_int', 'g_object_set_ptr', 'g_object_set_int64'?
+    atk_object_set_parent used at line 535. Did you mean 'g_object_set_uint', 'g_object_set_int', 'g_object_set_string', 'g_object_set_ptr_data', 'g_object_set_ptr'?
+    atk_object_set_role used at line 541. Did you mean 'g_object_set_float', 'g_object_set_uint', 'g_object_set_int', 'g_object_set_ptr', 'g_object_set_double'?
+    atk_role_for_name used at line 550
+    atk_role_get_localized_name used at line 556
+    atk_role_get_name used at line 562
+    atk_role_register used at line 566
+
+
+at -e:1
+
+real 29.82
+user 36.29
+sys 1.79

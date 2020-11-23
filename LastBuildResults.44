@@ -1,0 +1,142 @@
+Dependency Generation
+=====================
+real 0.57
+user 0.92
+sys 0.02
+ === GLib::Array ===
+Stage start      :   0.000
+Stage parse      :   1.696
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.598
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.722
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.011
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GLib::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.609
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GLib::Raw::Object ===
+Stage start      :   0.000
+Stage parse      :   1.558
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Struct_Subs ===
+Stage start      :   0.000
+Stage parse      :   1.545
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GLib::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.579
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.013
+Stage moar       :   0.000
+ === GLib::Raw::Subs ===
+Stage start      :   0.000
+Stage parse      :   1.579
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::Object ===
+Stage start      :   0.000
+Stage parse      :   1.960
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GLib::Roles::Pointer ===
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Could not find GLib::Roles::Pointer in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-JSON-GLib/lib
+    file#/home/cbwood/Projects/p6-GIR/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-VTE/lib
+    file#/home/cbwood/Projects/p6-ATK/lib
+    file#/home/cbwood/Projects/p6-ATK/bin
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at -e:1
+ === GLib::Roles::StaticClass ===
+Stage start      :   0.000
+Stage parse      :   1.740
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Value ===
+Stage start      :   0.000
+Stage parse      :   1.850
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Method::Also ===
+Stage start      :   0.000
