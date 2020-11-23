@@ -31,6 +31,10 @@ class AtkAttribute      is repr<CStruct> is export does GLib::Roles::Pointers {
   }
 }
 
+class AtkHyperlink      is repr<CStruct> is export does GLib::Roles::Pointers {
+  HAS GObject         $.parent;
+}
+
 class AtkRelation       is repr<CStruct> is export does GLib::Roles::Pointers {
   HAS GObject         $.parent;
 
