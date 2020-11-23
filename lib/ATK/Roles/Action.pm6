@@ -3,6 +3,8 @@ use v6.c;
 use ATK::Raw::Types;
 use ATK::Raw::Action;
 
+use GLib::Roles::Object;
+
 role ATK::Roles::Action {
   has AtkAction $!a;
 
@@ -10,10 +12,10 @@ role ATK::Roles::Action {
   { $!a }
 
   method roleInit-AtkAction {
-    return if $!v;
+    return Nil if $!a;
 
     \i = findProperImplementor(self.^attributes);
-    $!v = cast( AtkAction, i.get_value(self) );
+    $!a = cast( AtkAction, i.get_value(self) );
   }
 
   method do_action (Int() $i) {
