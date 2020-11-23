@@ -20,6 +20,7 @@ ATK::Raw::Types
 ATK::Roles::Signals::Object
 ATK::State
 ATK::Raw::Object
+ATK::Raw::Range
 ATK::Raw::Relation
 ATK::Raw::RelationSet
 ATK::Raw::StateSet
@@ -27,3 +28,4 @@ ATK::Relation
 ATK::RelationSet
 ATK::StateSet
 ATK::Object
+ATK::Range

@@ -128,3 +128,11 @@ class AtkImplementor    is repr<CPointer> does GLib::Roles::Pointers is export {
     is export
   { * }
 }
+
+# Opaque
+class AtkRange          is repr<CStruct> does GLib::Roles::Pointers is export {
+  # Stripped from atkrange.c
+  has gdouble $!lower;
+  has gdouble $!upper;
+  has Str     $!description;
+}
