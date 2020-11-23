@@ -7,6 +7,7 @@ use ATK::Object;
 
 use GLib::Roles::Object;
 use GLib::Roles::Signals::Generic;
+use ATK::Roles::Action;
 
 our subset AtkHyperlinkAncestry is export of Mu
   where AtkHyperlink | AtkAction | GObject;
@@ -14,6 +15,7 @@ our subset AtkHyperlinkAncestry is export of Mu
 class ATK::Hyperlink {
   also does GLib::Roles::Object;
   also does GLib::Roles::Signals::Generic;
+  also does ATK::Roles::Action;
 
   has AtkHyperlink $!h is implementor;
 
@@ -70,7 +72,7 @@ class ATK::Hyperlink {
     atk_hyperlink_get_n_anchors($!h);
   }
 
-  method get_object (gint $i) {
+  method get_object (Int() $i, :$raw = False) {
     my gint $ii = $i;
     my      $o  = atk_hyperlink_get_object($!h, $ii);
 
@@ -91,7 +93,7 @@ class ATK::Hyperlink {
   }
 
   method get_uri (Int() $i) {
-    my gint $ii = $i
+    my gint $ii = $i;
 
     atk_hyperlink_get_uri($!h, $ii);
   }
