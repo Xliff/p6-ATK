@@ -18,3 +18,5 @@ constant AtkAttributeSet is export = GSList;
 constant AtkState        is export = uint64;
 
 # Pointers
+class AtkAction is repr<CPointer> does GLib::Roles::Pointers is export { };
+class AtkValue  is repr<CPointer> does GLib::Roles::Pointers is export { };
