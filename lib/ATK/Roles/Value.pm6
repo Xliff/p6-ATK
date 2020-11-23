@@ -1,20 +1,28 @@
 use v6.c;
 
+use NativeCall;
+
 use ATK::Raw::Types;
+use ATK::Raw::Value;
 
 use GLib::GList;
 
 use GLib::Roles::ListData;
+use GLib::Roles::Object;
 use GLib::Roles::StaticClass;
 
+use ATK::Roles::Signals::Value;
+
 role ATK::Roles::Value {
+  also does ATK::Roles::Signals::Value;
+  
   has AtkValue $!v;
 
   method ATK::Raw::Definitions::AtkValue
   { $!v }
 
   method roleInit-AtkValue {
-    return if $!v;
+    return Nil if $!v;
 
     \i = findProperImplementor(self.^attributes);
     $!v = cast( AtkValue, i.get_value(self) );
@@ -65,7 +73,7 @@ role ATK::Roles::Value {
   }
 
   method value_get_type (::?CLASS:U: ) {
-    state ($n, $t)
+    state ($n, $t);
 
     unstable_get_type( ::?CLASS.^name, &atk_value_get_type, $n, $t );
   }

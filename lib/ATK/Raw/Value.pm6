@@ -5,6 +5,8 @@ use NativeCall;
 use GLib::Raw::Definitions;
 use GLib::Raw::Structs;
 use ATK::Raw::Definitions;
+use ATK::Raw::Enums;
+use ATK::Raw::Structs;
 
 unit package ATK::Raw::Value;
 
