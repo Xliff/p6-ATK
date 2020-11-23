@@ -8,12 +8,14 @@ use ATK::RelationSet;
 use ATK::StateSet;
 
 use GLib::Roles::Object;
+use ATK::Roles::Signals::Object;
 
 our subset AtkObjectAncestry is export of Mu
   where AtkObject | GObject;
 
 class ATK::Object {
   also does GLib::Roles::Object;
+  also does ATK::Roles::Signals::Object;
 
   has AtkObject $!ao is implementor;
 
