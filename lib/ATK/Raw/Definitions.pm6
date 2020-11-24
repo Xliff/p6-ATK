@@ -22,4 +22,5 @@ class AtkAction       is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkComponent    is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkDocument     is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkEditableText is repr<CPointer> does GLib::Roles::Pointers is export { }
+class AtkTable        is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkValue        is repr<CPointer> does GLib::Roles::Pointers is export { }
