@@ -1,5 +1,7 @@
 use v6.c;
 
+use NativeCall;
+
 use GLib::Raw::Definitions;
 use ATK::Raw::Definitions;
 use ATK::Raw::Structs;
@@ -9,7 +11,7 @@ unit package ATK::Raw::Documents;
 ### /usr/include/atk-1.0/atk/atkdocument.h
 
 sub atk_document_get_attribute_value (
-  AtkDocument $document, 
+  AtkDocument $document,
   Str         $attribute_name
 )
   returns Str
@@ -60,8 +62,8 @@ sub atk_document_get_type ()
 { * }
 
 sub atk_document_set_attribute_value (
-  AtkDocument $document, 
-  Str         $attribute_name, 
+  AtkDocument $document,
+  Str         $attribute_name,
   Str         $attribute_value
 )
   returns uint32
