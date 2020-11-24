@@ -1,4 +1,5 @@
 BuildList
+META6.json.bak
 *.pm6bak
 LastBuildResults
 LastBuildResults.*
