@@ -6,6 +6,7 @@ use ATK::Raw::Types;
 use ATK::Raw::Value;
 
 use GLib::GList;
+use ATK::Range;
 
 use GLib::Roles::ListData;
 use GLib::Roles::Object;
@@ -15,7 +16,7 @@ use ATK::Roles::Signals::Value;
 
 role ATK::Roles::Value {
   also does ATK::Roles::Signals::Value;
-  
+
   has AtkValue $!v;
 
   method ATK::Raw::Definitions::AtkValue
