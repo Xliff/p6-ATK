@@ -18,8 +18,8 @@ role ATK::Roles::Component {
   method roleInit-AtkComponent {
     return Nil if $!c;
 
-    \i = findProperImplementor(self.^attributes);
-    $!c = cast( AtkComponent, i.get_value(self) );
+    my \i = findProperImplementor(self.^attributes);
+    $!c   = cast( AtkComponent, i.get_value(self) );
   }
 
   method add_focus_handler (&handler) is DEPRECATED<state-change signal> {
@@ -78,7 +78,7 @@ role ATK::Roles::Component {
   method ref_accessible_at_point (
     Int() $x,
     Int() $y,
-    Int() $coord_type
+    Int() $coord_type,
           :$raw       = False
   ) {
     my gint         ($xx, $yy) = ($x, $y);
@@ -95,7 +95,7 @@ role ATK::Roles::Component {
   method remove_focus_handler (Int() $handler_id) {
     my guint $h = $handler_id;
 
-    atk_component_remove_focus_handler($!c, $hInt());
+    atk_component_remove_focus_handler($!c, $h);
   }
 
   method scroll_to (Int() $type) {
@@ -106,7 +106,7 @@ role ATK::Roles::Component {
 
   method scroll_to_point (Int() $coords, Int() $x, Int() $y) {
     my gint         ($xx, $yy) = ($x, $y);
-    my AtkCoordType $c         = $coord_type;
+    my AtkCoordType $c         = $coords;
 
     so atk_component_scroll_to_point($!c, $c, $xx, $yy);
   }
