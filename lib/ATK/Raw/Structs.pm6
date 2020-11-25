@@ -14,6 +14,15 @@ use GLib::Roles::Pointers;
 
 unit package ATK::Raw::Structs;
 
+class AtkRectangle      is repr<CStruct> is export does GLib::Roles::Pointers {
+  has gint $.x      is rw;
+  has gint $.y      is rw;
+  has gint $.width  is rw;
+  has gint $.height is rw;
+}
+
+constant AtkTextRectangle is export = AtkRectangle;
+
 class AtkAttribute      is repr<CStruct> is export does GLib::Roles::Pointers {
   has Str             $!name;
   has Str             $!value;
@@ -131,6 +140,23 @@ class AtkImplementor    is repr<CPointer> does GLib::Roles::Pointers is export {
     is native(atk)
     is export
   { * }
+}
+
+class AtkTextRange      is repr<CStruct> does GLib::Roles::Pointers is export {
+  HAS AtkTextRectangle $.bounds;
+  has gint             $.start-offset is rw;
+  has gint             $.end-offset   is rw;
+  has Str              $!content;
+
+  method content is rw {
+    Proxy.new:
+      FETCH => -> $           { $!content };
+      STORE => -> $, Str() \s { $!content := s };
+  }
+
+  method start_offset is rw { $!start-offset }
+  method end-offset   is rw { $!end-offset   }
+
 }
 
 # Opaque
