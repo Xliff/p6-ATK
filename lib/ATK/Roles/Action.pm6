@@ -14,8 +14,8 @@ role ATK::Roles::Action {
   method roleInit-AtkAction {
     return Nil if $!a;
 
-    \i = findProperImplementor(self.^attributes);
-    $!a = cast( AtkAction, i.get_value(self) );
+    my \i = findProperImplementor(self.^attributes);
+    $!a   = cast( AtkAction, i.get_value(self) );
   }
 
   method do_action (Int() $i) {

@@ -14,8 +14,8 @@ role ATK::Roles::Table {
   method roleInit-AtkTable {
     return Nil if $!t;
 
-    \i   = findProperImplementor(self.^attributes);
-    $!t = cast( AtkTable, i.get_value(self) );
+    my \i = findProperImplementor(self.^attributes);
+    $!t   = cast( AtkTable, i.get_value(self) );
   }
 
   method caption (:$raw = False) is rw {

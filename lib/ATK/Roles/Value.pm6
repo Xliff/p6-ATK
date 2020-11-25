@@ -25,8 +25,8 @@ role ATK::Roles::Value {
   method roleInit-AtkValue {
     return Nil if $!v;
 
-    \i = findProperImplementor(self.^attributes);
-    $!v = cast( AtkValue, i.get_value(self) );
+    my \i = findProperImplementor(self.^attributes);
+    $!v   = cast( AtkValue, i.get_value(self) );
   }
 
   # Is originally:

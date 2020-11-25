@@ -8,14 +8,14 @@ use ATK::Object;
 role ATK::Roles::EditableText {
   has AtkEditableText $!et;
 
-  method ATK::Raw::Definitions::AtkDocument
+  method ATK::Raw::Definitions::AtkEditableText
   { $!et }
 
   method roleInit-AtkEditableText {
     return Nil if $!et;
 
-    \i   = findProperImplementor(self.^attributes);
-    $!et = cast( AtkEditableText, i.get_value(self) );
+    my \i = findProperImplementor(self.^attributes);
+    $!et  = cast( AtkEditableText, i.get_value(self) );
   }
 
   method copy_text (Int() $start_pos, Int() $end_pos) {

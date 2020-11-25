@@ -18,8 +18,8 @@ role ATK::Roles::Document {
   method roleInit-AtkDocument {
     return Nil if $!d;
 
-    \i = findProperImplementor(self.^attributes);
-    $!d = cast( AtkDocument, i.get_value(self) );
+    my \i = findProperImplementor(self.^attributes);
+    $!d   = cast( AtkDocument, i.get_value(self) );
   }
 
   # Is originally:
