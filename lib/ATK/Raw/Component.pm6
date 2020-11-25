@@ -4,6 +4,7 @@ use NativeCall;
 
 use GLib::Raw::Definitions;
 use ATK::Raw::Definitions;
+use ATK::Raw::Enums;
 use ATK::Raw::Structs;
 
 unit package ATK::Raw::Component;
