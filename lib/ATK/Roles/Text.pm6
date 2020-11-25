@@ -340,18 +340,20 @@ class ATK::Text is ATK::Object {
 class ATK::Text::Attribute {
   also does GLib::Roles::StaticClass;
 
-  method for_name (Str() $name) {
-    atk_text_attribute_for_name($name);
-  }
-
-  method get_name (Int() $attr, :$enum = True) {
-    my AtkTextAttribute $a = $attr;
-    my                  $v = atk_text_attribute_get_name($attr);
+  method for_name (Str() $name, :$enum = True) {
+    my $v = atk_text_attribute_for_name($name);
 
     if $enum {
-      return AtkTextAttributeEnum($v) if AtkTextAttributeEnum.values.any == $a;
+      return AtkTextAttributeEnum($v)
+        if AtkTextAttributeEnum.enums.values.any == $v;
     }
     $v;
+  }
+
+  method get_name (Int() $attr) {
+    my AtkTextAttribute $a = $attr;
+
+    atk_text_attribute_get_name($attr);
   }
 
   method get_value (Int() $attr, Int() $index) {
