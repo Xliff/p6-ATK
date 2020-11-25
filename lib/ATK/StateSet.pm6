@@ -1,5 +1,7 @@
 use v6.c;
 
+use Method::Also;
+
 use NativeCall;
 
 use ATK::Raw::Types;
@@ -52,19 +54,20 @@ class ATK::StateSet {
     $state-set ?? self.bless(:$state-set) !! Nil;
   }
 
-  method add_state (Int() $type) {
+  method add_state (Int() $type) is also<add-state> {
     my AtkStateType $t = $type;
 
     so atk_state_set_add_state($!ss, $t);
   }
 
   proto method add_states (|)
+      is also<add-states>
   { * }
 
   multi method add_states (@types) {
     samewith(
       ArrayToCArray(AtkStateType, @types),
-      @types.elems;
+      @types.elems
     );
   }
   multi method add_states (
@@ -76,7 +79,9 @@ class ATK::StateSet {
     atk_state_set_add_states($!ss, $types, $nn);
   }
 
-  method and_sets (AtkStateSet() $compare_set, :$raw = False) {
+  method and_sets (AtkStateSet() $compare_set, :$raw = False)
+    is also<and-sets>
+  {
     my $ss = atk_state_set_and_sets($!ss, $compare_set);
 
     $ss ??
@@ -85,17 +90,18 @@ class ATK::StateSet {
       Nil;
   }
 
-  method clear_states {
+  method clear_states is also<clear-states> {
     atk_state_set_clear_states($!ss);
   }
 
-  method contains_state (Int() $type) {
+  method contains_state (Int() $type) is also<contains-state> {
     my AtkStateType $t = $type;
 
     so atk_state_set_contains_state($!ss, $t);
   }
 
   proto method contains_states (|)
+      is also<contains-states>
   { * }
 
   multi method contains_states (@types) {
@@ -110,17 +116,19 @@ class ATK::StateSet {
     so atk_state_set_contains_states($!ss, $types, $nn);
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
 
     unstable_get_type( self.^name, &atk_state_set_get_type, $n, $t );
   }
 
-  method is_empty {
+  method is_empty is also<is-empty> {
     so atk_state_set_is_empty($!ss);
   }
 
-  method or_sets (AtkStateSet() $compare_set, :$raw = False) {
+  method or_sets (AtkStateSet() $compare_set, :$raw = False)
+    is also<or-sets>
+  {
     my $ss = atk_state_set_or_sets($!ss, $compare_set);
 
     $ss ??
@@ -129,13 +137,15 @@ class ATK::StateSet {
       Nil;
   }
 
-  method remove_state (AtkStateType $type) {
+  method remove_state (AtkStateType $type) is also<remove-state> {
     my AtkStateType $t = $type;
 
     so atk_state_set_remove_state($!ss, $t);
   }
 
-  method xor_sets (AtkStateSet() $compare_set, :$raw = False) {
+  method xor_sets (AtkStateSet() $compare_set, :$raw = False)
+    is also<xor-sets>
+  {
     my $ss = atk_state_set_xor_sets($!ss, $compare_set);
 
     $ss ??
