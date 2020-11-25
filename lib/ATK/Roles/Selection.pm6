@@ -12,6 +12,16 @@ role ATK::Roles::Selection {
 
   has AtkSelection $!sel;
 
+  method ATK::Raw::Definitions::AtkSelection
+  { $!sel }
+
+  method roleInit-AtkSelection {
+    return Nil if $!sel;
+
+    my \i = findProperImplementor(self.^attributes);
+    $!sel = cast( AtkSelection, i.get_value(self) );
+  }
+
   # Is originally:
   # AtkSelection, gpointer --> void
   method selection-changed {
