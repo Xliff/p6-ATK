@@ -18,9 +18,9 @@ sub atk_state_set_add_state (AtkStateSet $set, AtkStateType $type)
 { * }
 
 sub atk_state_set_add_states (
-  AtkStateSet  $set,
-  AtkStateType $types,
-  gint         $n_types
+  AtkStateSet          $set,
+  CArray[AtkStateType] $types,
+  gint                 $n_types
 )
   is native(atk)
   is export
@@ -44,9 +44,9 @@ sub atk_state_set_contains_state (AtkStateSet $set, AtkStateType $type)
 { * }
 
 sub atk_state_set_contains_states (
-  AtkStateSet  $set,
-  AtkStateType $types,
-  gint         $n_types
+  AtkStateSet          $set,
+  CArray[AtkStateType] $types,
+  gint                 $n_types
 )
   returns uint32
   is native(atk)
