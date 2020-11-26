@@ -1,6 +1,7 @@
 use v6.c;
 
 use ATK::Raw::Types;
+use ATK::Raw::Object;
 
 use GLib::Roles::StaticClass;
 
