@@ -24,7 +24,7 @@ sub atk_relation_get_relation_type (AtkRelation $relation)
 { * }
 
 sub atk_relation_get_target (AtkRelation $relation)
-  returns GPtrArray
+  returns GArray # GPtrArray
   is native(atk)
   is export
 { * }
