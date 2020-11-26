@@ -1,5 +1,7 @@
 use v6.c;
 
+use Method::Also;
+
 use ATK::Raw::Types;
 use ATK::Raw::RelationSet;
 
@@ -59,7 +61,9 @@ our subset AtkRelationSetAncestry is export of Mu
   method add_relation_by_type (
     Int()       $relationship,
     AtkObject() $target
-  ) {
+  )
+    is also<add-relation-by-type>
+  {
     my AtkRelationType $rt = $relationship;
 
     atk_relation_set_add_relation_by_type($!rs, $rt, $target);
@@ -71,17 +75,24 @@ our subset AtkRelationSetAncestry is export of Mu
     atk_relation_set_contains($!rs, $rt);
   }
 
-  method contains_target (Int() $relationship, AtkObject() $target) {
+  method contains_target (Int() $relationship, AtkObject() $target)
+    is also<contains-target>
+  {
     my AtkRelationType $rt = $relationship;
 
     atk_relation_set_contains_target($!rs, $rt, $target);
   }
 
-  method get_n_relations {
+  method get_n_relations
+    is also<
+      get-n-relations
+      elems
+    >
+  {
     atk_relation_set_get_n_relations($!rs);
   }
 
-  method get_relation (Int() $i, :$raw = False) {
+  method get_relation (Int() $i, :$raw = False) is also<get-relation> {
     my gint $ii = $i;
     my      $r  = atk_relation_set_get_relation($!rs, $ii);
 
@@ -91,7 +102,9 @@ our subset AtkRelationSetAncestry is export of Mu
       Nil;
   }
 
-  method get_relation_by_type (Int() $relationship, :$raw = False) {
+  method get_relation_by_type (Int() $relationship, :$raw = False)
+    is also<get-relation-by-type>
+  {
     my AtkRelationType $rt = $relationship;
     my                 $r = atk_relation_set_get_relation_by_type($!rs, $rt);
 
@@ -101,7 +114,7 @@ our subset AtkRelationSetAncestry is export of Mu
       Nil;
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
 
     unstable_get_type( self.^name, &atk_relation_set_get_type, $n, $t );
