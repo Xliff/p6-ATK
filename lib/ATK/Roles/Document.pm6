@@ -82,7 +82,7 @@ role ATK::Roles::Document {
     atk_document_get_page_count($!d);
   }
 
-  method get_type (::?CLASS:U: ) {
+  method document_get_type (::?CLASS:U: ) {
     state ($n, $t);
 
     unstable_get_type( ::?CLASS.^name, &atk_document_get_type, $n, $t );
@@ -131,6 +131,10 @@ class ATK::Document is ATK::Object {
     my $o = self.bless(:$document);
     $o.ref if $ref;
     $o;
+  }
+
+  method get_type {
+    ATK::Document.document_get_type;
   }
 
 }
