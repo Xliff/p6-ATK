@@ -18,8 +18,10 @@ NativeCall
 ATK::Raw::Definitions
 ATK::Raw::Enums
 ATK::Raw::EditableText
+ATK::Raw::Image
 ATK::Raw::Structs
 ATK::Raw::Table
+ATK::Raw::TableCell
 ATK::Raw::Text
 ATK::Raw::Exports
 ATK::Raw::Types
@@ -37,9 +39,11 @@ ATK::Raw::Object
 ATK::Raw::Range
 ATK::Raw::Relation
 ATK::Raw::RelationSet
+ATK::Raw::Selection
 ATK::Raw::StateSet
 ATK::Relation
 ATK::RelationSet
+ATK::Role
 ATK::Roles::Action
 ATK::StateSet
 ATK::Object
@@ -47,7 +51,10 @@ ATK::Range
 ATK::Roles::Component
 ATK::Roles::Document
 ATK::Roles::EditableText
+ATK::Roles::Image
+ATK::Roles::Selection
 ATK::Roles::Table
+ATK::Roles::TableCell
 ATK::Roles::Text
 ATK::Roles::Value
 ATK::Roles::Window
