@@ -1,5 +1,7 @@
 use v6.c;
 
+use Method::Also;
+
 use ATK::Raw::Types;
 use ATK::Raw::Relation;
 
@@ -8,6 +10,7 @@ use GLib::Value;
 
 use GLib::Roles::Object;
 use GLib::Roles::StaticClass;
+use GLib::Roles::TypedArray;
 
 our subset AtkRelationAncestry is export of Mu
   where AtkRelation | GObject;
@@ -38,7 +41,8 @@ class ATK::Relation {
     self!setObject($to-parent);
   }
 
-  method ATK::Raw::Structs::AtkRelation
+  method ATK::Raw::Structs::AtkRelation\
+    is also<AtkRelation>
   { $!r }
 
   multi method new (AtkRelationAncestry $relation, :$ref = True) {
@@ -71,8 +75,8 @@ class ATK::Relation {
   }
 
   # Type: AtkRelationType
-  method relation-type is rw  {
-    my $gv = GLib::Value.new( GLib::Value.gTypeFromType(AtkRelationType) );
+  method relation-type is rw  is also<relation_type> {
+    my $gv = GLib::Value.new( GLib::Value.gtypeFromType(AtkRelationType) );
     Proxy.new(
       FETCH => sub ($) {
         $gv = GLib::Value.new(
@@ -102,7 +106,7 @@ class ATK::Relation {
         $o = cast(GArray, $o);
         return $o if $raw;
 
-        GLib::Array.new($o);
+        GLib::Array.new($o, type => AtkObject);
       },
       STORE => -> $, GArray() $val is copy {
         $gv.pointer = $val;
@@ -111,34 +115,34 @@ class ATK::Relation {
     );
   }
 
-  method add_target (AtkObject() $target) {
+  method add_target (AtkObject() $target) is also<add-target> {
     atk_relation_add_target($!r, $target);
   }
 
-  method get_relation_type {
+  method get_relation_type is also<get-relation-type> {
     AtkRelationTypeEnum( atk_relation_get_relation_type($!r) );
   }
 
-  method get_target (:$ptrarray = False, :$raw = False) {
+  method get_target (:$garray = False, :$raw = False) is also<get-target> {
     my $p = atk_relation_get_target($!r);
 
     return Nil unless $p;
-    return $p if $ptrarray && $raw;
+    return $p if $garray && $raw;
 
-    $p = GLib::PtrArray.new($p)
-      but GLib::Roles::TypedArray[AtkObject, $raw, ATK::Object];
-    return $p if $ptrarray;
+    $p = GLib::Array.new($p, type => AtkObject);
+    return $p if $garray;
 
-    $p.Array;
+    $raw ?? $p.Array
+         !! $p.Array.map({ ::('ATK::Object').new(.deref) });
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
 
     unstable_get_type( self.^name, &atk_relation_get_type, $n, $t );
   }
 
-  method remove_target (AtkObject() $target) {
+  method remove_target (AtkObject() $target) is also<remove-target> {
     so atk_relation_remove_target($!r, $target);
   }
 
@@ -147,11 +151,16 @@ class ATK::Relation {
 class ATK::Relation::Type {
   also does GLib::Roles::StaticClass;
 
-  method for_name (Str() $name) {
-    atk_relation_type_for_name($name);
+  method for_name (Str() $name, :$enum = True) is also<for-name> {
+    my $v = atk_relation_type_for_name($name);
+    if $enum {
+      return AtkRelationTypeEnum($v)
+        if AtkRelationTypeEnum.enums.values.any == $v;
+    }
+    $v;
   }
 
-  method get_name (Int() $type) {
+  method get_name (Int() $type) is also<get-name> {
     my AtkRelationType $t = $type;
 
     atk_relation_type_get_name($t);
