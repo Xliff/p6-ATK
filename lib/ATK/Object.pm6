@@ -1,5 +1,7 @@
 use v6.c;
 
+use Method::Also;
+
 use ATK::Raw::Types;
 use ATK::Raw::Object;
 
@@ -40,7 +42,8 @@ class ATK::Object {
     self!setObject($to-parent);
   }
 
-  method ATK::Raw::Definitions::AtkObject
+  method ATK::Raw::Structs::AtkObject
+    is also<AtkObject>
   { $!ao }
 
   multi method new (AtkObjectAncestry $atk-object, :$ref = True) {
@@ -50,9 +53,16 @@ class ATK::Object {
     $o.ref if $ref;
     $o;
   }
+  multi method new {
+    my $atk-object = self.new-object-ptr( ATK::Object.get-type );
+
+    $atk-object ?? self.bless( :$atk-object ) !! Nil;
+  }
 
   # Type: gint
-  method accessible-component-layer is rw  {
+  method accessible-component-layer is rw
+    is also<accessible_component_layer>
+  {
     my $gv = GLib::Value.new( G_TYPE_INT );
     Proxy.new(
       FETCH => sub ($) {
@@ -68,7 +78,9 @@ class ATK::Object {
   }
 
   # Type: gint
-  method accessible-component-mdi-zorder is rw  {
+  method accessible-component-mdi-zorder is rw
+    is also<accessible_component_mdi_zorder>
+  {
     my $gv = GLib::Value.new( G_TYPE_INT );
     Proxy.new(
       FETCH => sub ($) {
@@ -84,7 +96,7 @@ class ATK::Object {
   }
 
   # Type: gchar
-  method accessible-description is rw  {
+  method accessible-description is rw  is also<accessible_description> {
     my $gv = GLib::Value.new( G_TYPE_STRING );
     Proxy.new(
       FETCH => sub ($) {
@@ -101,7 +113,9 @@ class ATK::Object {
   }
 
   # Type: gint
-  method accessible-hypertext-nlinks is rw  {
+  method accessible-hypertext-nlinks is rw
+    is also<accessible_hypertext_nlinks>
+  {
     my $gv = GLib::Value.new( G_TYPE_INT );
     Proxy.new(
       FETCH => sub ($) {
@@ -117,7 +131,7 @@ class ATK::Object {
   }
 
   # Type: gchar
-  method accessible-name is rw  {
+  method accessible-name is rw  is also<accessible_name> {
     my $gv = GLib::Value.new( G_TYPE_STRING );
     Proxy.new(
       FETCH => sub ($) {
@@ -134,7 +148,7 @@ class ATK::Object {
   }
 
   # Type: AtkObject
-  method accessible-parent (:$raw = False) is rw  {
+  method accessible-parent (:$raw = False) is rw is also<accessible_parent> {
     my $gv = GLib::Value.new( self.get-type );
     Proxy.new(
       FETCH => sub ($) {
@@ -158,7 +172,7 @@ class ATK::Object {
   }
 
   # Type: gint
-  method accessible-role is rw  {
+  method accessible-role is rw  is also<accessible_role> {
     my $gv = GLib::Value.new( G_TYPE_INT );
     Proxy.new(
       FETCH => sub ($) {
@@ -175,7 +189,11 @@ class ATK::Object {
   }
 
   # Type: gchar
-  method accessible-table-caption is rw is DEPRECATED<table-caption-object> {
+  method accessible-table-caption
+    is rw
+    is DEPRECATED<table-caption-object>
+    is also<accessible_table_caption>
+  {
     my $gv = GLib::Value.new( G_TYPE_STRING );
     Proxy.new(
       FETCH => sub ($) {
@@ -192,7 +210,10 @@ class ATK::Object {
   }
 
   # Type: AtkObject
-  method accessible-table-caption-object (:$raw = False) is rw  {
+  method accessible-table-caption-object (:$raw = False)
+    is rw
+    is also<accessible_table_caption_object>
+  {
     my $gv = GLib::Value.new( self.get-type );
     Proxy.new(
       FETCH => sub ($) {
@@ -220,6 +241,7 @@ class ATK::Object {
     is DEPRECATED(
       'atk_table_get_column_description() and atk_table_set_column_description()'
     )
+    is also<accessible_table_column_description>
   {
     my $gv = GLib::Value.new( G_TYPE_STRING );
     Proxy.new(
@@ -241,6 +263,7 @@ class ATK::Object {
     is DEPRECATED(
       'atk_table_get_column_header() and atk_table_set_column_header()'
     )
+    is also<accessible_table_column_header>
   {
     my $gv = GLib::Value.new( self.get-type );
     Proxy.new(
@@ -269,6 +292,7 @@ class ATK::Object {
     is DEPRECATED(
       'atk_table_get_row_description() and atk_table_set_row_description()'
     )
+    is also<accessible_table_row_description>
   {
     my $gv = GLib::Value.new( G_TYPE_STRING );
     Proxy.new(
@@ -290,6 +314,7 @@ class ATK::Object {
     is DEPRECATED(
       'atk_table_get_row_header() and atk_table_set_row_header()'
     )
+    is also<accessible_table_row_header>
   {
     my $gv = GLib::Value.new( self.get-type );
     Proxy.new(
@@ -314,7 +339,10 @@ class ATK::Object {
   }
 
   # Type: AtkObject
-  method accessible-table-summary (:$raw = False) is rw  {
+  method accessible-table-summary (:$raw = False)
+    is rw
+    is also<accessible_table_summary>
+  {
     my $gv = GLib::Value.new( self.get-type );
     Proxy.new(
       FETCH => sub ($) {
@@ -338,7 +366,7 @@ class ATK::Object {
   }
 
   # Type: gdouble
-  method accessible-value is rw  is DEPRECATED {
+  method accessible-value is rw is DEPRECATED is also<accessible_value> {
     my $gv = GLib::Value.new( G_TYPE_DOUBLE );
     Proxy.new(
       FETCH => sub ($) {
@@ -356,41 +384,43 @@ class ATK::Object {
 
   # Is originally:
   # AtkObject, gpointer, gpointer --> void
-  method active-descendant-changed {
+  method active-descendant-changed is also<active_descendant_changed> {
     self.connect-active-descendant-changed($!ao);
   }
 
   # Is originally:
   # AtkObject, guint, gpointer, gpointer --> void
-  method children-changed {
+  method children-changed is also<children_changed> {
     self.connect-children-changed($!ao);
   }
 
   # Is originally:
   # AtkObject, gboolean, gpointer --> void
-  method focus-event {
+  method focus-event is also<focus_event> {
     self.connect-focus-event($!ao);
   }
 
   # Is originally:
   # AtkObject, gpointer, gpointer --> void
-  method property-change {
+  method property-change is also<property_change> {
     self.connect-property-change($!ao);
   }
 
   # Is originally:
   # AtkObject, gchar, gboolean, gpointer --> void
-  method state-change {
+  method state-change is also<state_change> {
     self.connect-state-change($!ao);
   }
 
   # Is originally:
   # AtkObject, gpointer --> void
-  method visible-data-changed {
+  method visible-data-changed is also<visible_data_changed> {
     self.connect($!ao, 'visible-data-changed');
   }
 
-  method add_relationship (Int() $relationship, AtkObject() $target) {
+  method add_relationship (Int() $relationship, AtkObject() $target)
+    is also<add-relationship>
+  {
     my AtkRelationType $r = $relationship;
 
     so atk_object_add_relationship($!ao, $r, $target);
@@ -398,15 +428,18 @@ class ATK::Object {
 
   method connect_property_change_handler (&handler)
     is DEPRECATED<property-changed>
+    is also<connect-property-change-handler>
   {
     atk_object_connect_property_change_handler($!ao, &handler);
   }
 
-  method get_accessible_id {
+  method get_accessible_id is also<get-accessible-id> {
     atk_object_get_accessible_id($!ao);
   }
 
-  method get_attributes (:$glist = False, :$raw = False) {
+  method get_attributes (:$glist = False, :$raw = False)
+    is also<get-attributes>
+  {
     my $al = atk_object_get_attributes($!ao);
 
     return Nil unless $al;
@@ -418,43 +451,43 @@ class ATK::Object {
     $al.Array;
   }
 
-  method get_description {
+  method get_description is also<get-description> {
     atk_object_get_description($!ao);
   }
 
-  method get_index_in_parent {
+  method get_index_in_parent is also<get-index-in-parent> {
     atk_object_get_index_in_parent($!ao);
   }
 
-  method get_layer {
+  method get_layer is also<get-layer> {
     atk_object_get_layer($!ao);
   }
 
-  method get_mdi_zorder {
+  method get_mdi_zorder is also<get-mdi-zorder> {
     atk_object_get_mdi_zorder($!ao);
   }
 
-  method get_n_accessible_children {
+  method get_n_accessible_children is also<get-n-accessible-children> {
     atk_object_get_n_accessible_children($!ao);
   }
 
-  method get_name {
+  method get_name is also<get-name> {
     atk_object_get_name($!ao);
   }
 
-  method get_object_locale {
+  method get_object_locale is also<get-object-locale> {
     atk_object_get_object_locale($!ao);
   }
 
-  method get_parent {
+  method get_parent is also<get-parent> {
     atk_object_get_parent($!ao);
   }
 
-  method get_role {
+  method get_role is also<get-role> {
     atk_object_get_role($!ao);
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
 
     unstable_get_type( self.^name, &atk_object_get_type, $n, $t );
@@ -464,14 +497,16 @@ class ATK::Object {
     atk_object_initialize($accessible, $data);
   }
 
-  method notify_state_change (Int() $state, Int() $value) {
+  method notify_state_change (Int() $state, Int() $value)
+    is also<notify-state-change>
+  {
     my AtkState $s = $state;
     my gboolean $v = $value.so.Int;
 
     atk_object_notify_state_change($!ao, $s, $value);
   }
 
-  method peek_parent (:$raw = False) {
+  method peek_parent (:$raw = False) is also<peek-parent> {
     my $p = atk_object_peek_parent($!ao);
 
     $p ??
@@ -480,7 +515,9 @@ class ATK::Object {
       Nil;
   }
 
-  method ref_accessible_child (Int() $i, :$raw = False) {
+  method ref_accessible_child (Int() $i, :$raw = False)
+    is also<ref-accessible-child>
+  {
     my gint $ii = $i;
     my      $c  = atk_object_ref_accessible_child($!ao, $ii);
 
@@ -490,7 +527,7 @@ class ATK::Object {
       Nil;
   }
 
-  method ref_relation_set (:$raw = False) {
+  method ref_relation_set (:$raw = False) is also<ref-relation-set> {
     my $rs = atk_object_ref_relation_set($!ao);
 
     $rs ??
@@ -499,7 +536,7 @@ class ATK::Object {
       Nil;
   }
 
-  method ref_state_set (:$raw = False) {
+  method ref_state_set (:$raw = False) is also<ref-state-set> {
     my $ss = atk_object_ref_state_set($!ao);
 
     $ss ??
@@ -510,35 +547,38 @@ class ATK::Object {
 
   method remove_property_change_handler (Int() $handler_id)
     is DEPRECATED
+    is also<remove-property-change-handler>
   {
     my guint $h = $handler_id;
 
     atk_object_remove_property_change_handler($!ao, $h);
   }
 
-  method remove_relationship (Int() $relationship, AtkObject() $target) {
+  method remove_relationship (Int() $relationship, AtkObject() $target)
+    is also<remove-relationship>
+  {
     my AtkRelationType $r = $relationship;
 
     so atk_object_remove_relationship($!ao, $r, $target);
   }
 
-  method set_accessible_id (Str() $name) {
+  method set_accessible_id (Str() $name) is also<set-accessible-id> {
     atk_object_set_accessible_id($!ao, $name);
   }
 
-  method set_description (Str() $description) {
+  method set_description (Str() $description) is also<set-description> {
     atk_object_set_description($!ao, $description);
   }
 
-  method set_name (Str() $name) {
+  method set_name (Str() $name) is also<set-name> {
     atk_object_set_name($!ao, $name);
   }
 
-  method set_parent (AtkObject() $parent) {
+  method set_parent (AtkObject() $parent) is also<set-parent> {
     atk_object_set_parent($!ao, $parent);
   }
 
-  method set_role (Int() $role) {
+  method set_role (Int() $role) is also<set-role> {
     my AtkRole $r = $role;
 
     atk_object_set_role($!ao, $r);
