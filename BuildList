@@ -12,6 +12,7 @@ GLib::Roles::Object
 GLib::Roles::Pointers
 GLib::Roles::Signals::Generic
 GLib::Roles::StaticClass
+GLib::Roles::TypedArray
 GLib::Value
 Method::Also
 NativeCall
