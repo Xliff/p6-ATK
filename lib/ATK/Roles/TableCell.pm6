@@ -6,6 +6,8 @@ use ATK::Raw::TableCell;
 use GLib::Array;
 use ATK::Object;
 
+use GLib::Roles::TypedArray;
+
 role ATK::Roles::TableCell {
   has AtkTableCell $!tc;
 
@@ -70,7 +72,7 @@ role ATK::Roles::TableCell {
     return Nil unless $hc;
     return $hc if $array && $raw;
 
-    $hc = GLib::Array.new($hc) but GLib::Roles::TypedArray[AtkObject];
+    $hc = GLib::Array.new($hc) but GLib::Roles::TypedArray[AtkObject, $raw];
     return $hc if $array;
 
     $raw ?? $hc.Array
