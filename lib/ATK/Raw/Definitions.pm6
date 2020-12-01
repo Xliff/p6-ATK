@@ -23,6 +23,7 @@ class AtkComponent         is repr<CPointer> does GLib::Roles::Pointers is expor
 class AtkDocument          is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkImage             is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkEditableText      is repr<CPointer> does GLib::Roles::Pointers is export { }
+class AtkGObjectAccessible is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkHyperlinkImpl     is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkSelection         is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkStreamableContent is repr<CPointer> does GLib::Roles::Pointers is export { }
