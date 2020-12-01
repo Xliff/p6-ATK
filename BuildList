@@ -60,3 +60,4 @@ ATK::Roles::Text
 ATK::Roles::Value
 ATK::Roles::Window
 ATK::Hyperlink
+ATK::Roles::HyperlinkImpl

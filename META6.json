@@ -50,7 +50,8 @@
       "ATK::Roles::Text"               :  "lib/ATK/Roles/Text.pm6"              ,
       "ATK::Roles::Value"              :  "lib/ATK/Roles/Value.pm6"             ,
       "ATK::Roles::Window"             :  "lib/ATK/Roles/Window.pm6"            ,
-      "ATK::Hyperlink"                 :  "lib/ATK/Hyperlink.pm6"               
+      "ATK::Hyperlink"                 :  "lib/ATK/Hyperlink.pm6"               ,
+      "ATK::Roles::HyperlinkImpl"      :  "lib/ATK/Roles/HyperlinkImpl.pm6"     
     },
     "name": "p6-ATK",
     "perl": "6.c",
