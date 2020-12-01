@@ -16,6 +16,9 @@ role ATK::Roles::HyperlinkImpl {
     $!hli = cast( AtkHyperlinkImpl, i.get_value(self) );
   }
 
+  method ATK::Raw::Definitions::AtkHyperlinkImpl
+  { $!hli }
+
   method get_hyperlink (:$raw = False) {
     my $h = atk_hyperlink_impl_get_hyperlink($!hli);
 
