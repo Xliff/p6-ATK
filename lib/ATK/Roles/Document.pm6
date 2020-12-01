@@ -16,7 +16,7 @@ role ATK::Roles::Document {
   { $!d }
 
   method roleInit-AtkDocument {
-    return Nil if $!d;
+    return if $!d;
 
     my \i = findProperImplementor(self.^attributes);
     $!d   = cast( AtkDocument, i.get_value(self) );
