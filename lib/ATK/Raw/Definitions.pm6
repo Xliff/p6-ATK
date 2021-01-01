@@ -21,6 +21,7 @@ constant AtkState        is export = uint64;
 class AtkAction            is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkComponent         is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkDocument          is repr<CPointer> does GLib::Roles::Pointers is export { }
+class AtkImplementorIface  is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkImage             is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkEditableText      is repr<CPointer> does GLib::Roles::Pointers is export { }
 class AtkGObjectAccessible is repr<CPointer> does GLib::Roles::Pointers is export { }
