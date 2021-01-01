@@ -11,7 +11,7 @@ role ATK::Roles::Image {
   method ATK::Raw::Definitions::AtkImage
   { $!i }
 
-  method roleInit-AtkDocument {
+  method roleInit-AtkImage {
     return Nil if $!i;
 
     my \i = findProperImplementor(self.^attributes);
