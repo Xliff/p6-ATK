@@ -166,3 +166,7 @@ class AtkRange          is repr<CStruct> does GLib::Roles::Pointers is export {
   has gdouble $!upper;
   has Str     $!description;
 }
+
+class AtkNoOpObject     is repr<CStruct> does GLib::Roles::Pointers is export {
+  HAS AtkObject $.parent;
+}
