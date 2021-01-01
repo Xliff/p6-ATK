@@ -17,6 +17,8 @@ use ATK::Roles::TableCell;
 use ATK::Roles::Value;
 use ATK::Roles::Window;
 
+our @no-op-object-composable-roles is export;
+
 our subset AtkNoOpObjectAncestry is export of Mu where
   AtkNoOpObject   | AtkAction       | AtkComponent    | AtkDocument        |
   AtkEditableText | AtkImage        | AtkSelection    | AtkTable           |
@@ -127,7 +129,7 @@ class ATK::NoOpObject is ATK::Object {
       }
     }
     self.setAtkObject($to-parent);
-    #self."roleInit-$_" for
+    self."roleInit-$_"() for @no-op-object-composable-roles;
   }
 
   multi method new (AtkNoOpObjectAncestry $no-op, :$ref = True) {
@@ -137,8 +139,8 @@ class ATK::NoOpObject is ATK::Object {
     $o.ref if $ref;
     $o;
   }
-  multi method new {
-    my $no-op = atk_no_op_object_new();
+  multi method new (GObject() $object) {
+    my $no-op = atk_no_op_object_new($object);
 
     $no-op ?? self.bless(:$no-op) !! Nil;
   }
@@ -164,3 +166,13 @@ sub atk_no_op_object_new (GObject $obj)
   is native(atk)
   is export
 { * }
+
+BEGIN {
+  @no-op-object-composable-roles = ATK::NoOpObject.^roles.grep({
+                                     my $n = .^name;
+                                     [&&](
+                                       $n.starts-with('ATK::Roles'),
+                                       $n.contains('Signals').not
+                                     )
+                                   }).map( 'Atk' ~ *.^shortname )
+}
