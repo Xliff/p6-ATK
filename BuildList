@@ -1,7 +1,9 @@
 GLib::Array
 GLib::GList
+GLib::IOChannel
 GLib::Raw::Definitions
 GLib::Raw::Enums
+GLib::Raw::Exceptions
 GLib::Raw::Exports
 GLib::Raw::Object
 GLib::Raw::Struct_Subs
@@ -20,6 +22,7 @@ ATK::Raw::Definitions
 ATK::Raw::Enums
 ATK::Raw::EditableText
 ATK::Raw::Image
+ATK::Raw::StreamableContent
 ATK::Raw::Structs
 ATK::Raw::Table
 ATK::Raw::TableCell
@@ -27,6 +30,7 @@ ATK::Raw::Text
 ATK::Raw::Exports
 ATK::Raw::Types
 ATK::Raw::Value
+ATK::Roles::Implementor
 ATK::Roles::Signals::Component
 ATK::Roles::Signals::Object
 ATK::Roles::Signals::Text
@@ -54,10 +58,13 @@ ATK::Roles::Document
 ATK::Roles::EditableText
 ATK::Roles::Image
 ATK::Roles::Selection
+ATK::Roles::StreamableContent
 ATK::Roles::Table
 ATK::Roles::TableCell
 ATK::Roles::Text
 ATK::Roles::Value
 ATK::Roles::Window
+ATK::GObjectAccessible
 ATK::Hyperlink
+ATK::NoOpObject
 ATK::Roles::HyperlinkImpl
