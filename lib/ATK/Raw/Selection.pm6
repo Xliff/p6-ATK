@@ -1,5 +1,7 @@
 use v6.c;
 
+use NativeCall;
+
 use GLib::Raw::Definitions;
 use ATK::Raw::Definitions;
 use ATK::Raw::Structs;
