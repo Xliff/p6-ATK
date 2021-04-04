@@ -5,10 +5,10 @@ use NativeCall;
 use ATK::Raw::Types;
 
 role ATK::Roles::Implementor {
-  has AtkImplementorIface $!aii;
+  has AtkImplementorIface $!ai;
 
   method ATK::Raw::Definitions::AtkImplementorIface
-  { $!aii }
+  { $!ai }
 
   # cw: For now, holds single stubbed method for ref_accessible
   method ref_accessible (:$raw = False) {
