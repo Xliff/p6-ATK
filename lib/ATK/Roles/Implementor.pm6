@@ -22,15 +22,3 @@ role ATK::Roles::Implementor {
   }
 
 }
-
-sub atk_implementor_ref_accessible (AtkImplementor $implementor)
-  returns AtkObject
-  is export
-  is native(atk)
-{ * }
-
-sub atk_implementor_get_type ()
-  returns GType
-  is export
-  is native(atk)
-{ * }
