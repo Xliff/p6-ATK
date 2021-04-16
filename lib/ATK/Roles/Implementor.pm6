@@ -10,6 +10,11 @@ role ATK::Roles::Implementor {
   method ATK::Raw::Definitions::AtkImplementorIface
   { $!ai }
 
+  method roleInit-AtkImplementor {
+    my \i = findProperImplementor(self.^attributes);
+    $!ai  = cast( AtkImplementorIface, i.get_value(self) );
+  }
+
   # cw: For now, holds single stubbed method for ref_accessible
   method ref_accessible (:$raw = False) {
     die "NYI!";
