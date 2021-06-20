@@ -17,7 +17,6 @@ GLib::Roles::StaticClass
 GLib::Roles::TypedArray
 GLib::Value
 Method::Also
-NativeCall
 ATK::Raw::Definitions
 ATK::Raw::Enums
 ATK::Raw::EditableText
