@@ -1,47 +1,47 @@
 Dependency Generation
 =====================
-real 0.54
-user 0.87
-sys 0.07
+real 0.77
+user 1.26
+sys 0.05
  === GLib::Array === (1/70)
 Stage start      :   0.000
-Stage parse      :   1.439
+Stage parse      :   2.290
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage mbc        :   0.016
 Stage moar       :   0.000
  === GLib::GList === (2/70)
 Stage start      :   0.000
-Stage parse      :   1.434
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
-Stage moar       :   0.000
- === GLib::IOChannel === (3/70)
-Stage start      :   0.000
-Stage parse      :   1.469
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
-Stage moar       :   0.000
- === GLib::Raw::Definitions === (4/70)
-Stage start      :   0.000
-Stage parse      :   1.257
+Stage parse      :   2.257
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
 Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GLib::IOChannel === (3/70)
+Stage start      :   0.000
+Stage parse      :   2.269
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GLib::Raw::Definitions === (4/70)
+Stage start      :   0.000
+Stage parse      :   1.970
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === GLib::Raw::Enums === (5/70)
 Stage start      :   0.000
-Stage parse      :   1.246
+Stage parse      :   2.067
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.003
@@ -50,7 +50,7 @@ Stage mbc        :   0.002
 Stage moar       :   0.000
  === GLib::Raw::Exceptions === (6/70)
 Stage start      :   0.000
-Stage parse      :   1.092
+Stage parse      :   1.811
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
@@ -59,7 +59,7 @@ Stage mbc        :   0.000
 Stage moar       :   0.000
  === GLib::Raw::Exports === (7/70)
 Stage start      :   0.000
-Stage parse      :   1.127
+Stage parse      :   1.834
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -68,7 +68,7 @@ Stage mbc        :   0.000
 Stage moar       :   0.000
  === GLib::Raw::Object === (8/70)
 Stage start      :   0.000
-Stage parse      :   1.232
+Stage parse      :   1.973
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -77,7 +77,7 @@ Stage mbc        :   0.001
 Stage moar       :   0.000
  === GLib::Raw::Struct_Subs === (9/70)
 Stage start      :   0.000
-Stage parse      :   1.224
+Stage parse      :   2.043
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -86,34 +86,34 @@ Stage mbc        :   0.001
 Stage moar       :   0.000
  === GLib::Raw::Structs === (10/70)
 Stage start      :   0.000
-Stage parse      :   1.411
+Stage parse      :   2.203
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GLib::Raw::Subs === (11/70)
+Stage start      :   0.000
+Stage parse      :   2.153
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::ListData === (12/70)
+Stage start      :   0.000
+Stage parse      :   2.226
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.001
 Stage mbc        :   0.001
 Stage moar       :   0.000
- === GLib::Raw::Subs === (11/70)
-Stage start      :   0.000
-Stage parse      :   1.371
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.002
-Stage mbc        :   0.002
-Stage moar       :   0.000
- === GLib::Roles::ListData === (12/70)
-Stage start      :   0.000
-Stage parse      :   1.430
-Stage syntaxcheck:   0.000
-Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.002
-Stage moar       :   0.000
  === GLib::Roles::Object === (13/70)
 Stage start      :   0.000
-Stage parse      :   1.542
+Stage parse      :   2.416
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -122,25 +122,25 @@ Stage mbc        :   0.002
 Stage moar       :   0.000
  === GLib::Roles::Pointers === (14/70)
 Stage start      :   0.000
-Stage parse      :   1.216
+Stage parse      :   1.966
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.001
-Stage mbc        :   0.000
+Stage mbc        :   0.001
 Stage moar       :   0.000
  === GLib::Roles::Signals::Generic === (15/70)
 Stage start      :   0.000
-Stage parse      :   1.419
+Stage parse      :   2.262
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
 Stage mast       :   0.001
-Stage mbc        :   0.002
+Stage mbc        :   0.001
 Stage moar       :   0.000
  === GLib::Roles::StaticClass === (16/70)
 Stage start      :   0.000
-Stage parse      :   1.434
+Stage parse      :   2.227
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -149,7 +149,7 @@ Stage mbc        :   0.002
 Stage moar       :   0.000
  === GLib::Roles::TypedArray === (17/70)
 Stage start      :   0.000
-Stage parse      :   1.357
+Stage parse      :   2.150
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -158,7 +158,7 @@ Stage mbc        :   0.001
 Stage moar       :   0.000
  === GLib::Value === (18/70)
 Stage start      :   0.000
-Stage parse      :   1.436
+Stage parse      :   2.274
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
@@ -167,20 +167,20 @@ Stage mbc        :   0.001
 Stage moar       :   0.000
  === Method::Also === (19/70)
 Stage start      :   0.000
-Stage parse      :   1.076
+Stage parse      :   1.841
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
-Stage mast       :   0.002
+Stage mast       :   0.003
 Stage mbc        :   0.000
 Stage moar       :   0.000
  === NativeCall === (20/70)
 Stage start      :   0.000
-Stage parse      :   1.191
+Stage parse      :   1.913
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage mast       :   0.011
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === ATK::Raw::Definitions === (21/70)
@@ -188,17 +188,17 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/Definitions.pm6
     Stage start      :   0.000
-    Stage parse      :   1.523
+    Stage parse      :   2.366
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.002
-    Stage mast       :   0.012
+    Stage mast       :   0.014
     Stage mbc        :   0.002
-Stage parse      :   2.716
+Stage parse      :   4.368
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
-Stage mast       :   0.002
+Stage mast       :   0.003
 Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Enums === (22/70)
@@ -206,53 +206,53 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/Enums.pm6
     Stage start      :   0.000
-    Stage parse      :   1.516
+    Stage parse      :   2.372
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.006
-    Stage mast       :   0.017
-    Stage mbc        :   0.005
-Stage parse      :   2.859
+    Stage optimize   :   0.008
+    Stage mast       :   0.025
+    Stage mbc        :   0.006
+Stage parse      :   4.376
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.001
-Stage mast       :   0.003
-Stage mbc        :   0.001
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.002
 Stage moar       :   0.000
  === ATK::Raw::EditableText === (23/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/EditableText.pm6
     Stage start      :   0.000
-    Stage parse      :   1.446
+    Stage parse      :   2.288
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.004
+    Stage optimize   :   0.005
     Stage mast       :   0.026
     Stage mbc        :   0.004
-Stage parse      :   2.779
+Stage parse      :   4.297
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Image === (24/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Image.pm6
     Stage start      :   0.000
-    Stage parse      :   1.488
+    Stage parse      :   2.294
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.004
-    Stage mast       :   0.015
-    Stage mbc        :   0.003
-Stage parse      :   2.839
+    Stage optimize   :   0.005
+    Stage mast       :   0.020
+    Stage mbc        :   0.004
+Stage parse      :   4.334
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.015
+Stage optimize   :   0.001
+Stage mast       :   0.003
 Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::StreamableContent === (25/70)
@@ -260,53 +260,54 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/StreamableContent.pm6
     Stage start      :   0.000
-    Stage parse      :   1.399
+    Stage parse      :   2.325
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.003
     Stage mast       :   0.018
-    Stage mbc        :   0.002
-Stage parse      :   2.741
+    Stage mbc        :   0.003
+Stage parse      :   4.430
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Structs === (26/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Structs.pm6
     Stage start      :   0.000
-    Stage parse      :   1.811
+    Stage parse      :   2.795
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.011
-    Stage mast       :   0.045
-    Stage mbc        :   0.004
-Stage parse      :   3.213
+    Stage optimize   :   0.013
+    Stage mast       :   0.043
+    Stage mbc        :   0.005
+R: GLib::Roles::Pointers
+Stage parse      :   4.893
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.008
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Table === (27/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Table.pm6
     Stage start      :   0.000
-    Stage parse      :   1.743
+    Stage parse      :   2.612
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.017
-    Stage mast       :   0.049
+    Stage optimize   :   0.023
+    Stage mast       :   0.056
     Stage mbc        :   0.012
-Stage parse      :   3.131
+Stage parse      :   4.736
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === ATK::Raw::TableCell === (28/70)
@@ -314,17 +315,17 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/TableCell.pm6
     Stage start      :   0.000
-    Stage parse      :   1.754
+    Stage parse      :   2.565
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.005
-    Stage mast       :   0.016
-    Stage mbc        :   0.026
-Stage parse      :   3.082
+    Stage mast       :   0.021
+    Stage mbc        :   0.007
+Stage parse      :   4.582
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
 Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Text === (29/70)
@@ -332,22 +333,31 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/Text.pm6
     Stage start      :   0.000
-    Stage parse      :   1.795
+    Stage parse      :   2.736
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.015
-    Stage mast       :   0.043
-    Stage mbc        :   0.012
-Stage parse      :   3.208
+    Stage optimize   :   0.017
+    Stage mast       :   0.057
+    Stage mbc        :   0.015
+Stage parse      :   4.853
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.002
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Exports === (30/70)
 Stage start      :   0.000
-Stage parse      :   1.077
+
+    precomp lib/ATK/Raw/Exports.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.103
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.001
+    Stage mast       :   0.003
+    Stage mbc        :   0.002
+Stage parse      :   1.963
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
@@ -359,197 +369,198 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/Types.pm6
     Stage start      :   0.000
-    Stage parse      :   1.802
+    Stage parse      :   2.613
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.001
-    Stage mast       :   0.010
-    Stage mbc        :   0.006
-Stage parse      :   3.228
+    Stage mast       :   0.013
+    Stage mbc        :   0.002
+Stage parse      :   4.637
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.005
-Stage mast       :   0.008
-Stage mbc        :   0.003
+Stage mast       :   0.017
+Stage mbc        :   0.006
 Stage moar       :   0.000
  === ATK::Raw::Value === (32/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Value.pm6
     Stage start      :   0.000
-    Stage parse      :   1.851
+    Stage parse      :   2.689
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.007
-    Stage mast       :   0.041
-    Stage mbc        :   0.008
-Stage parse      :   3.286
+    Stage optimize   :   0.012
+    Stage mast       :   0.028
+    Stage mbc        :   0.009
+Stage parse      :   4.704
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Implementor === (33/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Implementor.pm6
     Stage start      :   0.000
-    Stage parse      :   1.393
+    Stage parse      :   2.146
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.005
-    Stage mast       :   0.017
-    Stage mbc        :   0.007
-Stage parse      :   2.819
+    Stage optimize   :   0.020
+    Stage mast       :   0.018
+    Stage mbc        :   0.008
+Stage parse      :   4.136
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Signals::Component === (34/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Signals/Component.pm6
     Stage start      :   0.000
-    Stage parse      :   1.484
+    Stage parse      :   2.244
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.006
-    Stage mast       :   0.016
-    Stage mbc        :   0.006
-Stage parse      :   2.891
+    Stage optimize   :   0.008
+    Stage mast       :   0.030
+    Stage mbc        :   0.010
+Stage parse      :   4.236
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Signals::Object === (35/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Signals/Object.pm6
     Stage start      :   0.000
-    Stage parse      :   1.629
+    Stage parse      :   2.503
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.020
-    Stage mast       :   0.054
-    Stage mbc        :   0.011
-Stage parse      :   3.124
+    Stage optimize   :   0.019
+    Stage mast       :   0.052
+    Stage mbc        :   0.053
+Stage parse      :   4.596
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Signals::Text === (36/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Signals/Text.pm6
     Stage start      :   0.000
-    Stage parse      :   1.805
+    Stage parse      :   2.619
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.012
-    Stage mast       :   0.017
-    Stage mbc        :   0.005
-Stage parse      :   3.226
+    Stage optimize   :   0.010
+    Stage mast       :   0.022
+    Stage mbc        :   0.012
+Stage parse      :   4.671
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.010
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Signals::Value === (37/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Signals/Value.pm6
     Stage start      :   0.000
-    Stage parse      :   1.402
+    Stage parse      :   2.127
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.004
-    Stage mast       :   0.017
-    Stage mbc        :   0.002
-Stage parse      :   2.681
+    Stage mast       :   0.016
+    Stage mbc        :   0.004
+Stage parse      :   4.059
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::State === (38/70)
 Stage start      :   0.000
 
     precomp lib/ATK/State.pm6
     Stage start      :   0.000
-    Stage parse      :   1.823
+    Stage parse      :   2.687
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.004
-    Stage mast       :   0.017
-    Stage mbc        :   0.005
-Stage parse      :   3.292
+    Stage optimize   :   0.019
+    Stage mast       :   0.022
+    Stage mbc        :   0.007
+R: GLib::Roles::StaticClass
+Stage parse      :   4.734
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.002
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Action === (39/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Action.pm6
     Stage start      :   0.000
-    Stage parse      :   1.611
+    Stage parse      :   2.378
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.005
-    Stage mast       :   0.061
-    Stage mbc        :   0.006
-Stage parse      :   2.995
+    Stage optimize   :   0.007
+    Stage mast       :   0.034
+    Stage mbc        :   0.007
+Stage parse      :   4.419
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Component === (40/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Component.pm6
     Stage start      :   0.000
-    Stage parse      :   1.671
+    Stage parse      :   2.508
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.013
-    Stage mast       :   0.044
-    Stage mbc        :   0.008
-Stage parse      :   3.092
+    Stage optimize   :   0.017
+    Stage mast       :   0.060
+    Stage mbc        :   0.010
+Stage parse      :   4.573
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Document === (41/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Document.pm6
     Stage start      :   0.000
-    Stage parse      :   1.488
+    Stage parse      :   2.346
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.004
-    Stage mast       :   0.023
-    Stage mbc        :   0.004
-Stage parse      :   2.805
+    Stage optimize   :   0.005
+    Stage mast       :   0.021
+    Stage mbc        :   0.005
+Stage parse      :   4.321
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.004
 Stage mbc        :   0.001
 Stage moar       :   0.000
  === ATK::Raw::Hyperlink === (42/70)
@@ -557,89 +568,89 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/Hyperlink.pm6
     Stage start      :   0.000
-    Stage parse      :   1.533
+    Stage parse      :   2.321
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.004
-    Stage mast       :   0.016
-    Stage mbc        :   0.004
-Stage parse      :   2.902
+    Stage optimize   :   0.005
+    Stage mast       :   0.020
+    Stage mbc        :   0.005
+Stage parse      :   4.345
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Object === (43/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Object.pm6
     Stage start      :   0.000
-    Stage parse      :   1.773
+    Stage parse      :   2.770
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.014
-    Stage mast       :   0.039
-    Stage mbc        :   0.014
-Stage parse      :   3.170
+    Stage optimize   :   0.019
+    Stage mast       :   0.063
+    Stage mbc        :   0.016
+Stage parse      :   4.832
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
 Stage optimize   :   0.001
-Stage mast       :   0.002
-Stage mbc        :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Range === (44/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Range.pm6
     Stage start      :   0.000
-    Stage parse      :   1.492
+    Stage parse      :   2.286
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.004
-    Stage mast       :   0.016
-    Stage mbc        :   0.003
-Stage parse      :   2.855
+    Stage mast       :   0.019
+    Stage mbc        :   0.004
+Stage parse      :   4.252
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Relation === (45/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/Relation.pm6
     Stage start      :   0.000
-    Stage parse      :   1.834
+    Stage parse      :   2.619
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.010
-    Stage mast       :   0.019
-    Stage mbc        :   0.007
-Stage parse      :   3.238
+    Stage optimize   :   0.006
+    Stage mast       :   0.035
+    Stage mbc        :   0.008
+Stage parse      :   4.622
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::RelationSet === (46/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/RelationSet.pm6
     Stage start      :   0.000
-    Stage parse      :   1.635
+    Stage parse      :   2.377
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.006
-    Stage mast       :   0.025
-    Stage mbc        :   0.009
-Stage parse      :   2.998
+    Stage optimize   :   0.007
+    Stage mast       :   0.037
+    Stage mbc        :   0.006
+Stage parse      :   4.379
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
 Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::Selection === (47/70)
@@ -647,35 +658,35 @@ Stage start      :   0.000
 
     precomp lib/ATK/Raw/Selection.pm6
     Stage start      :   0.000
-    Stage parse      :   1.505
+    Stage parse      :   2.275
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.003
-    Stage mast       :   0.015
-    Stage mbc        :   0.003
-Stage parse      :   2.862
+    Stage optimize   :   0.004
+    Stage mast       :   0.025
+    Stage mbc        :   0.004
+Stage parse      :   4.254
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Raw::StateSet === (48/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Raw/StateSet.pm6
     Stage start      :   0.000
-    Stage parse      :   1.690
+    Stage parse      :   2.440
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.010
-    Stage mast       :   0.023
-    Stage mbc        :   0.006
-Stage parse      :   3.058
+    Stage optimize   :   0.008
+    Stage mast       :   0.090
+    Stage mbc        :   0.007
+Stage parse      :   4.511
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
 Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Relation === (49/70)
@@ -683,359 +694,365 @@ Stage start      :   0.000
 
     precomp lib/ATK/Relation.pm6
     Stage start      :   0.000
-    Stage parse      :   2.242
+    Stage parse      :   3.108
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.009
-    Stage mast       :   0.033
-    Stage mbc        :   0.007
-Stage parse      :   3.772
+    Stage optimize   :   0.010
+    Stage mast       :   0.043
+    Stage mbc        :   0.006
+R: GLib::Roles::Object
+Stage parse      :   5.212
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.009
+Stage mbc        :   0.000
 Stage moar       :   0.000
+R: GLib::Roles::StaticClass
  === ATK::RelationSet === (50/70)
 Stage start      :   0.000
 
     precomp lib/ATK/RelationSet.pm6
     Stage start      :   0.000
-    Stage parse      :   1.487
+    Stage parse      :   2.278
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.014
-    Stage mast       :   0.025
-    Stage mbc        :   0.005
-Stage parse      :   2.970
+    Stage optimize   :   0.013
+    Stage mast       :   0.059
+    Stage mbc        :   0.007
+R: GLib::Roles::Object
+Stage parse      :   4.432
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.002
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Role === (51/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Role.pm6
     Stage start      :   0.000
-    Stage parse      :   1.718
+    Stage parse      :   2.567
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.004
-    Stage mast       :   0.017
-    Stage mbc        :   0.003
-Stage parse      :   3.153
+    Stage mast       :   0.016
+    Stage mbc        :   0.009
+Stage parse      :   4.564
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Action === (52/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Action.pm6
     Stage start      :   0.000
-    Stage parse      :   1.963
+    Stage parse      :   2.888
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.008
-    Stage mast       :   0.026
+    Stage optimize   :   0.010
+    Stage mast       :   0.040
     Stage mbc        :   0.008
-Stage parse      :   3.446
+Stage parse      :   4.970
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::StateSet === (53/70)
 Stage start      :   0.000
 
     precomp lib/ATK/StateSet.pm6
     Stage start      :   0.000
-    Stage parse      :   2.064
+    Stage parse      :   2.974
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.008
-    Stage mast       :   0.033
-    Stage mbc        :   0.004
-Stage parse      :   3.580
+    Stage optimize   :   0.017
+    Stage mast       :   0.059
+    Stage mbc        :   0.006
+R: GLib::Roles::Object
+Stage parse      :   5.108
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Object === (54/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Object.pm6
     Stage start      :   0.000
-    Stage parse      :   2.257
+    Stage parse      :   3.165
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.030
-    Stage mast       :   0.084
-    Stage mbc        :   0.012
-Stage parse      :   3.889
+    Stage optimize   :   0.039
+    Stage mast       :   0.080
+    Stage mbc        :   0.032
+R: GLib::Roles::Object
+Stage parse      :   5.415
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
+R: ATK::Roles::Signals::Object
  === ATK::Range === (55/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Range.pm6
     Stage start      :   0.000
-    Stage parse      :   1.289
+    Stage parse      :   2.015
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.008
-    Stage mast       :   0.023
-    Stage mbc        :   0.003
-Stage parse      :   2.731
+    Stage optimize   :   0.010
+    Stage mast       :   0.036
+    Stage mbc        :   0.004
+Stage parse      :   4.028
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Component === (56/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Component.pm6
     Stage start      :   0.000
-    Stage parse      :   1.597
+    Stage parse      :   2.418
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.015
-    Stage mast       :   0.038
-    Stage mbc        :   0.008
-Stage parse      :   3.139
+    Stage optimize   :   0.021
+    Stage mast       :   0.060
+    Stage mbc        :   0.010
+Stage parse      :   4.627
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Document === (57/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Document.pm6
     Stage start      :   0.000
-    Stage parse      :   1.524
+    Stage parse      :   2.310
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.015
-    Stage mast       :   0.040
-    Stage mbc        :   0.008
-Stage parse      :   3.088
+    Stage optimize   :   0.021
+    Stage mast       :   0.035
+    Stage mbc        :   0.009
+Stage parse      :   4.469
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::EditableText === (58/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/EditableText.pm6
     Stage start      :   0.000
-    Stage parse      :   1.563
+    Stage parse      :   2.286
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.013
-    Stage mast       :   0.044
-    Stage mbc        :   0.006
-Stage parse      :   3.071
+    Stage optimize   :   0.020
+    Stage mast       :   0.033
+    Stage mbc        :   0.008
+Stage parse      :   4.475
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Image === (59/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Image.pm6
     Stage start      :   0.000
-    Stage parse      :   1.513
+    Stage parse      :   2.275
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
     Stage optimize   :   0.015
-    Stage mast       :   0.030
-    Stage mbc        :   0.006
-Stage parse      :   3.090
+    Stage mast       :   0.038
+    Stage mbc        :   0.009
+Stage parse      :   4.436
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Selection === (60/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Selection.pm6
     Stage start      :   0.000
-    Stage parse      :   1.497
+    Stage parse      :   2.285
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.019
-    Stage mast       :   0.025
-    Stage mbc        :   0.004
-Stage parse      :   3.061
+    Stage optimize   :   0.015
+    Stage mast       :   0.042
+    Stage mbc        :   0.008
+Stage parse      :   4.433
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::StreamableContent === (61/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/StreamableContent.pm6
     Stage start      :   0.000
-    Stage parse      :   2.002
+    Stage parse      :   2.893
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.008
-    Stage mast       :   0.040
-    Stage mbc        :   0.005
-Stage parse      :   3.543
+    Stage optimize   :   0.009
+    Stage mast       :   0.055
+    Stage mbc        :   0.006
+Stage parse      :   5.087
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Table === (62/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Table.pm6
     Stage start      :   0.000
-    Stage parse      :   1.560
+    Stage parse      :   2.438
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.049
-    Stage mast       :   0.049
-    Stage mbc        :   0.006
-Stage parse      :   3.168
+    Stage optimize   :   0.037
+    Stage mast       :   0.073
+    Stage mbc        :   0.008
+Stage parse      :   4.690
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::TableCell === (63/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/TableCell.pm6
     Stage start      :   0.000
-    Stage parse      :   1.954
+    Stage parse      :   2.844
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.012
-    Stage mast       :   0.031
-    Stage mbc        :   0.005
-Stage parse      :   3.517
+    Stage optimize   :   0.034
+    Stage mast       :   0.034
+    Stage mbc        :   0.039
+Stage parse      :   5.043
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Text === (64/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Text.pm6
     Stage start      :   0.000
-    Stage parse      :   2.166
+    Stage parse      :   3.080
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.026
-    Stage mast       :   0.050
-    Stage mbc        :   0.008
-Stage parse      :   3.793
+    Stage optimize   :   0.035
+    Stage mast       :   0.093
+    Stage mbc        :   0.009
+Stage parse      :   5.359
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Value === (65/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Value.pm6
     Stage start      :   0.000
-    Stage parse      :   2.225
+    Stage parse      :   3.200
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.017
-    Stage mast       :   0.034
-    Stage mbc        :   0.007
-Stage parse      :   3.751
+    Stage optimize   :   0.024
+    Stage mast       :   0.043
+    Stage mbc        :   0.009
+Stage parse      :   5.364
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::Window === (66/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/Window.pm6
     Stage start      :   0.000
-    Stage parse      :   1.426
+    Stage parse      :   2.262
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.009
-    Stage mast       :   0.025
-    Stage mbc        :   0.006
-Stage parse      :   2.939
+    Stage optimize   :   0.013
+    Stage mast       :   0.065
+    Stage mbc        :   0.008
+Stage parse      :   4.467
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::GObjectAccessible === (67/70)
 Stage start      :   0.000
 
     precomp lib/ATK/GObjectAccessible.pm6
     Stage start      :   0.000
-    Stage parse      :   1.627
+    Stage parse      :   2.408
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.012
-    Stage mast       :   0.023
-    Stage mbc        :   0.006
-Stage parse      :   3.160
+    Stage optimize   :   0.010
+    Stage mast       :   0.032
+    Stage mbc        :   0.015
+Stage parse      :   4.569
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Hyperlink === (68/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Hyperlink.pm6
     Stage start      :   0.000
-    Stage parse      :   1.569
+    Stage parse      :   2.255
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.010
-    Stage mast       :   0.034
-    Stage mbc        :   0.003
-Stage parse      :   3.124
+    Stage optimize   :   0.017
+    Stage mast       :   0.039
+    Stage mbc        :   0.004
+Stage parse      :   4.479
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
 Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::NoOpObject === (69/70)
@@ -1043,38 +1060,38 @@ Stage start      :   0.000
 
     precomp lib/ATK/NoOpObject.pm6
     Stage start      :   0.000
-    Stage parse      :   2.144
+    Stage parse      :   3.109
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.015
-    Stage mast       :   0.037
-    Stage mbc        :   0.010
-Stage parse      :   3.747
+    Stage optimize   :   0.017
+    Stage mast       :   0.044
+    Stage mbc        :   0.009
+Stage parse      :   5.464
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
-Stage mast       :   0.001
-Stage mbc        :   0.001
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
 Stage moar       :   0.000
  === ATK::Roles::HyperlinkImpl === (70/70)
 Stage start      :   0.000
 
     precomp lib/ATK/Roles/HyperlinkImpl.pm6
     Stage start      :   0.000
-    Stage parse      :   1.627
+    Stage parse      :   2.434
     Stage syntaxcheck:   0.000
     Stage ast        :   0.000
-    Stage optimize   :   0.012
-    Stage mast       :   0.020
-    Stage mbc        :   0.004
-Stage parse      :   3.134
+    Stage optimize   :   0.016
+    Stage mast       :   0.029
+    Stage mbc        :   0.008
+Stage parse      :   4.662
 Stage syntaxcheck:   0.000
 Stage ast        :   0.000
-Stage optimize   :   0.000
+Stage optimize   :   0.001
 Stage mast       :   0.003
-Stage mbc        :   0.001
+Stage mbc        :   0.000
 Stage moar       :   0.000
 
-real 189.00
-user 230.37
-sys 13.07
+real 283.62
+user 330.86
+sys 19.74
