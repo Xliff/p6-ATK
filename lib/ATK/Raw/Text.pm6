@@ -219,7 +219,7 @@ sub atk_text_get_caret_offset (AtkText $text)
   is export
 { * }
 
-sub atk_text_set_caret_offset (AtkText $text, gint $offset)
+sub atk_text_set_caret_offset (AtkText $text, guint $offset)
   returns uint32
   is native(atk)
   is export
