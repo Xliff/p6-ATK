@@ -1,14 +1,15 @@
 GLib::Array
 GLib::GList
 GLib::IOChannel
+GLib::Raw::Debug
 GLib::Raw::Definitions
 GLib::Raw::Enums
 GLib::Raw::Exceptions
 GLib::Raw::Exports
 GLib::Raw::Object
-GLib::Raw::Struct_Subs
 GLib::Raw::Structs
 GLib::Raw::Subs
+GLib::Roles::Implementor
 GLib::Roles::ListData
 GLib::Roles::Object
 GLib::Roles::Pointers
@@ -17,6 +18,7 @@ GLib::Roles::StaticClass
 GLib::Roles::TypedArray
 GLib::Value
 Method::Also
+NativeCall
 ATK::Raw::Definitions
 ATK::Raw::Enums
 ATK::Raw::EditableText
@@ -35,6 +37,7 @@ ATK::Roles::Signals::Object
 ATK::Roles::Signals::Text
 ATK::Roles::Signals::Value
 ATK::State
+ATK::TypeOrigin
 ATK::Raw::Action
 ATK::Raw::Component
 ATK::Raw::Document
