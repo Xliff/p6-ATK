@@ -1,3 +1,4 @@
 prefix=ATK::
+struct-prefix=Atk
 modules=ATK::Raw::Types
 backups=backup,bitbucket,google-backup
