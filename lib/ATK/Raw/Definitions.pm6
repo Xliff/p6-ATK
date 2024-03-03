@@ -8,7 +8,7 @@ use GLib::Roles::Pointers;
 unit package ATK::Raw::Definitions;
 
 # Forced compile count
-constant forced = 34;
+constant forced = 244;
 
 # Libs
 constant atk is export = 'atk-1.0';
